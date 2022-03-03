@@ -1,0 +1,55 @@
+body{
+  background-color: #8385ea;
+  font-family: 'Roboto'sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-around;
+  font-size: 62.5%;
+  height: 70vh;
+}
+
+h1{
+  color:#f785cf;
+  font-size: 4em;
+}
+
+.midSection{
+  display: flex;
+  width: 100%;
+  flex-direction:row;
+  justify-content: space-evenly;
+}
+.subMidSect{
+  text-align: center;
+}
+p{
+  font-size: 2em;
+}
+.choiceBoxes{
+  background-color: #8385ea;
+  border: 0;
+  border-bottom: 2px solid #f785cf;
+  font-size: 2em;
+  box-sizing: border-box;
+  width: 20em;
+}
+
+input{
+  color: white;
+}
+select{
+  color:white;
+}
+
+#calculate-button{
+  background-color : #f785cf;
+  color: white;
+  font-family: 'Roboto' sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  padding: 1.5em 5em;
+  border-radius: 5%;
+  border: none;
+}

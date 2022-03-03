@@ -13,7 +13,6 @@ var planets = [
   ['Sun', 27.9] 
 ];
 
-
   // We are going to solve this by breaking the problem into three parts. 
   // Programmers like automating things, we'll populate the HTML drop down options using code, 
   // instead of having to type out all the values. 
@@ -79,10 +78,8 @@ function handleClickEvent(e) {
       let finalAns = document.getElementById('output');
       finalAns.innerText = `If you were on ${planetName}, you would weigh ${result}lbs!`;
 
-} 
-
+}
   // 7. Set the #calculate-button element's onclick method to use the handleClickEvent function.
       
   document.getElementById('calculate-button').addEventListener('click', handleClickEvent);
-
-
+console.log(yellow)
