@@ -23,11 +23,13 @@ var planets = [
   // The value of each option should be the planet's name. 
   // Use the following built-in methods: 
   // `.forEach` `document.createElement` `document.getElementById` `.appendChild` 
-document.body.onload = populatePlanets;
-
+  
+  //load function every time i go on my page
+  document.body.onload = populatePlanets;
 
 function populatePlanets(){
-  //loop through every planet
+  
+  //running function on his element within our planet variable
   planets.forEach(planet => {
       //create an option element
       let options = document.createElement("option", {value : planet});
@@ -43,25 +45,30 @@ function populatePlanets(){
       planetSelection.appendChild(options);
   });
 }
-
-
+//Here is the actual function
 function calculateWeight(weight, planetName){
+  //empty var that we will push new infor into
   let spaceWeight;
   let index;
 
+  //loop through every planet
   for(let i=0; i<planets.length; i++){
-      let planetInfo = planets[i];
+      let planetInfo = planets[i]; //each element within planet is going to be saved in this var
+     //our condition if each planet has a planet name then show me that planet 
       if (planetInfo.includes(planetName)){
-          index = i;
-      } else continue;
+          index = i;  
+      } else continue; // if not continue
   }
 
+  //The math for getting the space weight
+  //saving individual planet in gravity
   let gravity = planets[index][1];
+  //we have our planet & its weight multipled for our space weight 
   spaceWeight = gravity * weight;
   return spaceWeight;
 }
 
-
+//Event listeners , our action
 function handleClickEvent(e) {
    // 3. Create a variable called userWeight and assign the value of the user's weight. 
       let userWeight = document.getElementById('user-weight').value;
@@ -82,4 +89,3 @@ function handleClickEvent(e) {
   // 7. Set the #calculate-button element's onclick method to use the handleClickEvent function.
       
   document.getElementById('calculate-button').addEventListener('click', handleClickEvent);
-console.log(yellow)
